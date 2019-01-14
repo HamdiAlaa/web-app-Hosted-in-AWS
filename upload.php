@@ -1,43 +1,7 @@
 <?php
-// // Include the database configuration file
-// include 'conf.php';
-// $statusMsg = '';
-
-// // File upload path
-// if (!class_exists('S3'))require_once('S3.php');
-// if (!defined('awsAccessKey')) define('awsAccessKey', 'your aws acces key');
-// if (!defined('awsSecretKey')) define('awsSecretKey', 'Your aws secret Key');
-// $s3 = new S3(awsAccessKey, awsSecretKey);
-// $targetDir = $path;
-// $fileName = basename($_FILES["file"]["name"]);
-// $targetFilePath = $targetDir . $fileName;
-// $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
-
-// if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
-//     // Allow certain file formats
-//     $allowTypes = array('jpg','png','jpeg','gif','pdf');
-//     if(in_array($fileType, $allowTypes)){
-//         // Upload file to server
-//         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-//             // Insert image file name into database
-//             $insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
-//             if($insert){
-//                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-//             }else{
-//                 $statusMsg = "File upload failed, please try again.";
-//             } 
-//         }else{
-//             $statusMsg = "Sorry, there was an error uploading your file.";
-//         }
-//     }else{
-//         $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
-//     }
-// }else{
-//     $statusMsg = 'Please select a file to upload.';
-// }
 
 //data base
-$db = new PDO('mysql:host=imagedb.cubw42gmxakj.eu-west-1.rds.amazonaws.com;dbname=images', 'root', 'Mba5922949822;');
+$db = new PDO('mysql:host=imagedb.cubw42gmxakj.eu-west-1.rds.amazonaws.com;dbname=images', 'root', 'your password');
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
@@ -47,8 +11,8 @@ else
 echo "error upload S3 module";
 
 //AWS access info
-if (!defined('awsAccessKey')) define('awsAccessKey', 'AKIAIRC47XVEI23JXXZQ');
-if (!defined('awsSecretKey')) define('awsSecretKey', 'BeB1Xpbj7x+g8S8zSPppzCEW8k4xT9JSe2DS5TUU');
+if (!defined('awsAccessKey')) define('awsAccessKey', 'Your aws acces key');
+if (!defined('awsSecretKey')) define('awsSecretKey', 'your aws secret key');
 
 //instantiate the class
 $s3 = new S3(awsAccessKey, awsSecretKey);
