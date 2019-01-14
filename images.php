@@ -12,7 +12,7 @@
 <body>
     <div class="img-container">
         <?php
-            $db = new PDO('mysql:host=imagedb.cubw42gmxakj.eu-west-1.rds.amazonaws.com;dbname=images', 'root', 'Mba5922949822;');
+            $db = new PDO('mysql:host=imagedb.cubw42gmxakj.eu-west-1.rds.amazonaws.com;dbname=images', 'root', 'your password');
             $getImages = $db->query("SELECT filename FROM images");
             $Imageslist = $getImages->fetchAll();
             for($i = 0; $i < count($Imageslist); $i++) {
