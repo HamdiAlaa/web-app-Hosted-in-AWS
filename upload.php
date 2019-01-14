@@ -5,8 +5,8 @@
 
 // // File upload path
 // if (!class_exists('S3'))require_once('S3.php');
-// if (!defined('awsAccessKey')) define('awsAccessKey', 'AKIAIRC47XVEI23JXXZQ');
-// if (!defined('awsSecretKey')) define('awsSecretKey', 'BeB1Xpbj7x+g8S8zSPppzCEW8k4xT9JSe2DS5TUU');
+// if (!defined('awsAccessKey')) define('awsAccessKey', 'your aws acces key');
+// if (!defined('awsSecretKey')) define('awsSecretKey', 'Your aws secret Key');
 // $s3 = new S3(awsAccessKey, awsSecretKey);
 // $targetDir = $path;
 // $fileName = basename($_FILES["file"]["name"]);
