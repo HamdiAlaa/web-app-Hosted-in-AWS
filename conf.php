@@ -2,7 +2,7 @@
 // Database configuration
 $dbHost     = "imagedb.cubw42gmxakj.eu-west-1.rds.amazonaws.com";
 $dbUsername = "root";
-$dbPassword = "Mba5922949822;";
+$dbPassword = "your password";
 $dbName     = "cloud_app";
 // Upload images configuration
 $vpc_domaine_name ="";
